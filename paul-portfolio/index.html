@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>WordsWave — Paul Owuor, AI Training Specialist, Technical Writer, Data &amp; Code Analyst</title>
+  <meta name="description" content="Paul Owuor is an AI training specialist, technical writer, and data and code analyst based in Nairobi, Kenya." />
+  <meta name="theme-color" content="#07090d" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="WordsWave — AI · Code · Data" />
+  <meta property="og:description" content="Making complex technology clear, useful, and reliable." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <div class="app">
+    <header class="top">
+      <a class="brand" href="#main" aria-label="Paul Owuor, home">
+        <span class="mono" aria-hidden="true">PO</span>
+        <span class="brand-text"><strong>Paul Owuor</strong><span>AI · Code · Data</span></span>
+      </a>
+      <div class="top-right">
+        <span class="loc"><i data-icon="pin"></i>Nairobi, Kenya</span>
+        <a class="icon-btn" data-link="github" href="#" target="_blank" rel="noopener noreferrer" aria-label="Paul on GitHub"><i data-icon="github"></i></a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/paul-owuor-b706296a/" target="_blank" rel="noopener noreferrer" aria-label="Paul on LinkedIn"><i data-icon="linkedin"></i></a>
+      </div>
+    </header>
+
+    <main id="main" class="hero">
+      <section class="intro" aria-labelledby="headline">
+        <p class="name">WordsWave</p>
+        <p class="role">AI Training Specialist</p>
+        <p class="role-sub">Technical Writer / Data &amp; Code Analyst</p>
+        <h1 id="headline">Making complex technology clear, useful, and reliable.</h1>
+        <p class="lede">I work across AI evaluation, programming, data analysis, and technical communication to turn complex problems into clear, evidence-based solutions.</p>
+
+        <div class="actions">
+          <a class="btn primary" data-link="writersadmin" href="#" target="_blank" rel="noopener noreferrer">Visit WritersAdmin <i data-icon="external"></i></a>
+          <a class="btn secondary" data-link="github" href="#" target="_blank" rel="noopener noreferrer"><i data-icon="github"></i> Explore GitHub</a>
+        </div>
+
+        <ul class="contact">
+          <li><a data-link="whatsapp" href="#" target="_blank" rel="noopener noreferrer"><i data-icon="whatsapp"></i>WhatsApp</a></li>
+          <li><a href="https://www.linkedin.com/in/paul-owuor-b706296a/" target="_blank" rel="noopener noreferrer"><i data-icon="linkedin"></i>LinkedIn</a></li>
+          <li class="muted">AI · Programming · Research · Writing</li>
+        </ul>
+      </section>
+
+      <section class="viz" aria-label="Interactive map of skills">
+        <div class="viz-stage" id="stage">
+          <noscript><p class="muted">Skills: AI &amp; LLM evaluation, programming, data &amp; statistics, technical writing, data visualization, code review.</p></noscript>
+        </div>
+        <div class="info" id="info" aria-live="polite">
+          <h2 id="info-title">AI &amp; Technical Analysis</h2>
+          <p id="info-desc">Select a node to see what I do in each area.</p>
+          <ul class="chips" id="info-chips"></ul>
+        </div>
+      </section>
+    </main>
+
+    <section class="strip" aria-label="Skill areas">
+      <ul id="strip">
+        <li data-node="ai"><i data-icon="cpu"></i>AI &amp; LLM Training</li>
+        <li data-node="prog"><i data-icon="code"></i>Programming</li>
+        <li data-node="data"><i data-icon="database"></i>Data &amp; Statistics</li>
+        <li data-node="viz"><i data-icon="chart"></i>Data Visualization</li>
+        <li data-node="write"><i data-icon="file"></i>Technical Writing</li>
+      </ul>
+    </section>
+
+    <footer class="foot"><small>© 2026 WordsWave</small></footer>
+  </div>
+
+  <a id="wa" class="wa" data-link="whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Contact Paul on WhatsApp">
+    <i data-icon="whatsapp"></i>
+    <span class="wa-tip" role="tooltip">Chat on WhatsApp</span>
+  </a>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
