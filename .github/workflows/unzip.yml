@@ -3,7 +3,8 @@ name: Extract Paul Portfolio ZIP
 on:
   push:
     paths:
-      - 'paul_porfolio.zip' # Triggers only when this specific file is uploaded
+      - 'paul_porfolio.zip'
+  workflow_dispatch: # Enables the manual "Run workflow" button
 
 jobs:
   unzip-files:
