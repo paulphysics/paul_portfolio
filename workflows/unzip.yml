@@ -1,0 +1,39 @@
+name: Extract Paul Portfolio ZIP
+
+on:
+  push:
+    paths:
+      - 'paul_porfolio.zip' # Triggers only when this specific file is uploaded
+
+jobs:
+  unzip-files:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Grants permission to push the unzipped folders back to GitHub
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Unzip Portfolio with Nested Folders
+        run: |
+          # Unzips the file and automatically recreates all nested folders
+          unzip -o paul_porfolio.zip 
+          
+          # Deletes the original ZIP to keep your repository clean
+          rm paul_porfolio.zip 
+
+      - name: Commit and Push Extracted Files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@://github.com"
+          
+          git add .
+          
+          # Commits the new nested folders if changes are found
+          if ! git diff --cached --quiet; then
+            git commit -m "Automated unzip: Extracted paul_porfolio nested folders"
+            git push
+          else
+            echo "No new files found to commit."
+          fi
