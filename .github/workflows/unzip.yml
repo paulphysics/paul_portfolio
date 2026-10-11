@@ -3,7 +3,7 @@ name: Extract Paul Portfolio ZIP
 on:
   push:
     paths:
-      - 'paul_porfolio.zip'
+      - 'paul_portfolio.zip'
   workflow_dispatch: # Enables the manual "Run workflow" button
 
 jobs:
@@ -18,11 +18,15 @@ jobs:
 
       - name: Unzip Portfolio with Nested Folders
         run: |
-          # Unzips the file and automatically recreates all nested folders
-          unzip -o paul_porfolio.zip 
-          
-          # Deletes the original ZIP to keep your repository clean
-          rm paul_porfolio.zip 
+          if [ -f "paul_portfolio.zip" ]; then
+            echo "File found! Unzipping now..."
+            unzip -o paul_portfolio.zip
+            rm paul_portfolio.zip
+          else
+            echo "❌ ERROR: Could not find 'paul_portfolio.zip' in the root repository folder."
+            echo "Please verify that the file name matches perfectly and is uploaded directly to the root."
+            exit 1
+          fi
 
       - name: Commit and Push Extracted Files
         run: |
@@ -33,7 +37,7 @@ jobs:
           
           # Commits the new nested folders if changes are found
           if ! git diff --cached --quiet; then
-            git commit -m "Automated unzip: Extracted paul_porfolio nested folders"
+            git commit -m "Automated unzip: Extracted paul_portfolio nested folders"
             git push
           else
             echo "No new files found to commit."
