@@ -6,6 +6,16 @@
   <title>The writer, AI Training Specialist, Technical Writer, Data &amp; Code Analyst</title>
   <meta name="description" content="I am an AI training specialist, technical writer, and data and code analyst based in Nairobi, Kenya." />
   <meta name="theme-color" content="#07090d" />
+  <script>
+    /* Set the theme before first paint to avoid a dark/light flash */
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.dataset.theme = t;
+      } catch (e) { document.documentElement.dataset.theme = "dark"; }
+    })();
+  </script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <meta property="og:title" content="WordsWave — AI · Code · Data" />
   <meta property="og:description" content="Making complex technology clear, useful, and reliable." />
@@ -24,6 +34,7 @@
         <span class="loc"><i data-icon="pin"></i>Nairobi, Kenya</span>
         <a class="icon-btn" data-link="github" href="#" target="_blank" rel="noopener noreferrer" aria-label="Paul Physics on GitHub"><i data-icon="github"></i></a>
         <a class="icon-btn" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Paul on LinkedIn"><i data-icon="linkedin"></i></a>
+        <button type="button" id="theme-toggle" class="icon-btn" aria-label="Switch to light mode"></button>
       </div>
     </header>
 
