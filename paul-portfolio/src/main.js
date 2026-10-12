@@ -3,10 +3,12 @@ import "./styles.css";
 import { hydrateIcons, svgIcon } from "./icons.js";
 import { initConstellation } from "./constellation.js";
 import { initParticles } from "./particles.js";
+import { initTheme } from "./theme.js";
 import { WRITERSADMIN_URL, GITHUB_PROFILE_URL, WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from "./config.js";
 
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 hydrateIcons();
+initTheme();
 
 /* ---------- External links driven by config ---------- */
 const isHttp = (u) => /^https?:\/\//i.test(u);
