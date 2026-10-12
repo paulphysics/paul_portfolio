@@ -238,6 +238,10 @@ h1 {
 .info.flash { animation: flash .35s ease-out; }
 @keyframes flash { from { border-color: var(--accent); } to { border-color: var(--line); } }
 
+@media (min-width: 901px) {
+  .info { margin-right: 76px; }
+}
+
 /* ---------- Bottom strip ---------- */
 .strip { padding: 10px 0; border-top: 1px solid var(--line); padding-right: 76px; }
 .strip ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
@@ -253,7 +257,7 @@ h1 {
 
 /* ---------- WhatsApp ---------- */
 .wa {
-  position: fixed; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); z-index: 20;
+  position: fixed; right: max(20px, env(safe-area-inset-right)); bottom: 64px; z-index: 20;
   width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center;
   background: var(--wa); color: #fff; font-size: 30px;
   box-shadow: var(--shadow-wa);
