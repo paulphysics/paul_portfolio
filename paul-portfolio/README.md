@@ -1,4 +1,4 @@
-# Paul Owuor — Portfolio
+# Paul - Portfolio
 
 A static, single-screen portfolio: Vite + vanilla JavaScript, no backend, no API calls.
 Only runtime dependency: the self-hosted Inter font (`@fontsource-variable/inter`). Icons are inlined.
