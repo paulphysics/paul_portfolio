@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>What I'm offering now | The Writer</title>
+  <meta name="description" content="Websites, M-Pesa integration, statistics, machine learning and more." />
+  <meta name="theme-color" content="#f5f7fa" />
+  <script>
+    /* Set the theme before first paint to avoid a dark/light flash */
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "light" && t !== "dark") t = "light"; /* light is the default */
+        document.documentElement.dataset.theme = t;
+      } catch (e) { document.documentElement.dataset.theme = "light"; }
+    })();
+  </script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div class="doc">
+    <header class="top">
+      <a class="brand" href="/" aria-label="The Writer, back to home">
+        <span class="mono" aria-hidden="true">PO</span>
+        <span class="brand-text"><strong>The Writer</strong><span>AI · Code · Data</span></span>
+      </a>
+      <div class="top-right">
+        <a class="btn ghost small" href="/"><span aria-hidden="true">←</span> Home</a>
+        <button type="button" id="theme-toggle" class="icon-btn" aria-label="Switch to dark mode"></button>
+      </div>
+    </header>
+
+    <main class="mail-wrap">
+      <article class="mail" aria-labelledby="subject">
+        <p class="subject"><span class="subject-label">Subject:</span> <strong id="subject">What I'm offering now: websites, M-Pesa, statistics, ML and more</strong></p>
+
+        <div class="mail-body">
+          <p>Hi,</p>
+
+          <p>I hope you're doing well. It's been a while since we worked together, and I wanted to share what I'm offering now.</p>
+
+          <p>Beyond writing, I now take on:</p>
+
+          <h2>Web and software</h2>
+          <ul>
+            <li>Web design and technical website building: clean, fast, mobile-friendly sites, from a one-page presence to more functional builds (HTML, CSS, JavaScript, PHP)</li>
+            <li>M-Pesa payment integration, so a website or app can accept payments from customers</li>
+            <li>Programming help and code review in the languages most taught at school and college: Python, Java, C, C++, C#, JavaScript, PHP, SQL, R and MATLAB</li>
+          </ul>
+
+          <h2>Statistics, data and machine learning</h2>
+          <ul>
+            <li>Anything statistics-related, no matter the software involved: SPSS, Stata, SAS, Minitab, EViews, JASP, jamovi, R and RStudio, Python, MATLAB and Excel. I have colleagues at hand helping with the wider load</li>
+            <li>Machine learning: building and evaluating models (Python, R, Jupyter and Google Colab) and explaining the results in plain language</li>
+            <li>Qualitative and mixed-methods analysis: NVivo and ATLAS.ti</li>
+            <li>Data visualization and dashboards: Tableau, Power BI and Excel</li>
+            <li>Data management and cleaning: SQL, Excel and Google Sheets</li>
+            <li>Lab and scientific data analysis: GraphPad Prism and MATLAB</li>
+            <li>Mapping and GIS: QGIS and ArcGIS</li>
+          </ul>
+
+          <h2>Writing, research and documents</h2>
+          <ul>
+            <li>Technical documentation, reports, whitepapers and algorithm explanations</li>
+            <li>Research writing support and formatting: Word, LaTeX and Overleaf, with referencing tools such as Zotero, Mendeley and EndNote</li>
+            <li>Presentations and visuals: PowerPoint, Google Slides and Canva</li>
+            <li>AI output review: prompt engineering, model evaluation and RLHF-style review</li>
+          </ul>
+
+          <p>The portfolio itself is a sample of the work. I designed and built it as a single screen with an interactive skills map and light and dark modes:</p>
+
+          <p><a href="/">https://thewriter1.netlify.app/</a></p>
+
+          <p>If you have a website to build or fix, payments to set up, data to analyze, or a model to evaluate, I'd be glad to talk it through. The quickest way to reach me is WhatsApp: +254 724 098 263.</p>
+
+          <p>If someone in your network needs any of this, an introduction would mean a lot.</p>
+
+          <p class="sign">Warm regards,<br />Paul</p>
+
+          <p class="ps"></p>
+        </div>
+      </article>
+
+      <div class="doc-actions">
+        <a class="btn ghost" href="/"><span aria-hidden="true">←</span> Back to home</a>
+        <a class="btn primary" id="wa-btn" href="#" target="_blank" rel="noopener noreferrer"><i data-icon="whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/src/about.js"></script>
+</body>
+</html>
