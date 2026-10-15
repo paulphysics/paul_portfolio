@@ -194,6 +194,8 @@ h1 {
 .btn.secondary { color: var(--text); border: 1px solid var(--sec-border); background: var(--sec-bg); }
 .btn.secondary:hover { transform: translateY(-2px); border-color: var(--sec-hover-border); background: var(--sec-hover-bg); }
 .unconfigured { cursor: help; }
+.btn.ghost { color: var(--text); border: 1px solid var(--line); background: transparent; }
+.btn.ghost:hover { transform: translateY(-2px); color: var(--accent); border-color: var(--line-strong); background: var(--hover-bg); }
 
 .contact { list-style: none; margin: clamp(14px, 3vh, 26px) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 13.5px; }
 .contact li { display: flex; align-items: center; }
