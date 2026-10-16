@@ -11,7 +11,7 @@ export const SKILLS = [
     desc: "Reviewing AI outputs for technical accuracy and logical consistency.",
     chips: ["Prompt Engineering", "Model Evaluation", "RLHF"] },
   { id: "prog", label: "Programming and Web Design", icon: "code",
-    desc: "Working with Python, SQL, C++, R, and Java among others. Designing websites like this one. MPESA intergration",
+    desc: "Working with Python, SQL, C++, R, and Java among others. Designing websites like this one. MPESA integration",
     chips: ["Python", "SQL", "C++", "R", "Java"] },
   { id: "data", label: "Data & Statistics", icon: "database",
     desc: "Using statistical and analytical tools to investigate data.",
